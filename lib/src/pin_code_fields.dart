@@ -560,6 +560,7 @@ class _PinCodeTextFieldState extends State<PinCodeTextField>
     if (!widget.enabled) {
       return null;
     }
+    if (index < _selectedIndex) return widget.underlineGradient;
     if (((_selectedIndex == index) ||
             (_selectedIndex == index + 1 && index + 1 == widget.length)) &&
         _focusNode!.hasFocus) {
